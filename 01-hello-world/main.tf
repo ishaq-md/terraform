@@ -13,7 +13,7 @@ resource "google_compute_instance" "example" {
   
   boot_disk {
     initialize_params {
-      image = "ubuntu-1604-lts"
+      image = "debian-cloud/debian-9"
     }
   }
   
