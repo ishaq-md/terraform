@@ -2,14 +2,9 @@ pipeline {
     agent any
      
     stages {
-      stage('checkout') {
-          steps {
-                git url: 'https://github.com/ishaqmdgcp/terraform.git'
-             
-          }
-        }
+      
 
-  stage('Set Terraform path') {
+		stage('Set Terraform path') {
             steps {
                 script {
                     def tfHome = tool name: 'Terraform'
