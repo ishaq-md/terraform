@@ -1,14 +1,14 @@
 # Configure the Google Cloud provider
 provider "google" {
-  project = "silent-thunder-256105"
-  region  = "us-east1-b"
+  project = "ishaqgcpproject"
+  region  = "us-central1"
 }
 
 # Create a Google Compute instance
 resource "google_compute_instance" "example" {
-  name          = "success"
+  name          = "terraform"
   machine_type  = "f1-micro"
-  zone          = "us-east1-b"
+  zone          = "us-central1-f"
   tags = ["prod"]
   
   boot_disk {
