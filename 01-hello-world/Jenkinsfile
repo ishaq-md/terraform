@@ -21,7 +21,7 @@ pipeline {
                     env.PATH = "${tfHome}:${env.PATH}"
                 }
                 sh 'pwd'
-                sh 'echo $SVC_ACCOUNT_KEY'
+                sh 'echo $SVC_ACCOUNT_KEY > terraform.json'
                 sh 'ls'
                 sh 'terraform --version'               
                
