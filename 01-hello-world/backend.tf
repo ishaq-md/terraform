@@ -1,7 +1,7 @@
 terraform {
   backend "gcs"{
     bucket      = "terraform"
-    prefix      = "dev"
-    #credentials = "credentials.json"
+    #prefix      = "dev"
+    credentials = "terraform.json"
   }
 }

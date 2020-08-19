@@ -1,5 +1,10 @@
 pipeline {
     agent any
+
+
+    environment {
+    SVC_ACCOUNT_KEY = credentials('terraform-auth')
+  }
      
     stages {
         stage ('checkout'){
@@ -15,8 +20,10 @@ pipeline {
                     def tfHome = tool name: 'Terraform'
                     env.PATH = "${tfHome}:${env.PATH}"
                 }
-                sh 'terraform --version'
-               
+                sh 'pwd'
+                sh 'echo $SVC_ACCOUNT_KEY'
+                sh 'ls'
+                sh 'terraform --version'               
                
             }
         }
