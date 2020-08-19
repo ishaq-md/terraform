@@ -21,6 +21,7 @@ pipeline {
                     env.PATH = "${tfHome}:${env.PATH}"
                 }
                 sh 'echo $SVC_ACCOUNT_KEY | base64 -d > ./terraform.json'
+		sh 'pwd'
                 sh 'terraform --version'               
                
             }
@@ -28,6 +29,8 @@ pipeline {
         
          stage('Provision infrastructure') {
             steps {
+                dir("terraform") 
+                {
                 
                 sh 'terraform init'
                 sh 'terraform plan'
