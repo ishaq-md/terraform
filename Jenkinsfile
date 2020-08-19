@@ -28,10 +28,7 @@ pipeline {
         }
         
          stage('Provision infrastructure') {
-            steps {
-                dir("terraform") 
-                {
-                
+		 steps {            
                 sh 'terraform init'
                 sh 'terraform plan'
                 sh 'terraform apply -auto-approve'
@@ -45,4 +42,4 @@ pipeline {
       
     }
 }
-}
+
