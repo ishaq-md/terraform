@@ -9,7 +9,7 @@ resource "google_compute_instance" "example" {
   name          = "terraform"
   machine_type  = "f1-micro"
   zone          = "us-central1-f"
-  tags = ["prod","web"]
+  #tags = ["prod","web"]
   
   boot_disk {
     initialize_params {
