@@ -30,14 +30,13 @@ pipeline {
         
          stage('Provision infrastructure') {
             steps {
-                dir("01-hello-world") 
-                {
+                
                 sh 'terraform init'
                 sh 'terraform plan'
                 sh 'terraform apply -auto-approve'
                              
              
-            }
+            
         }
         }
         
