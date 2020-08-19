@@ -1,7 +1,7 @@
 # Configure the Google Cloud provider
 provider "google" {
   project = "ishaqgcpproject"
-  credentials = ${file("./terraform/terraform.json")}"
+  credentials = file("terraform.json")
   region  = "us-central1"
 }
 
