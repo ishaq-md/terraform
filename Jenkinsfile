@@ -29,7 +29,7 @@ pipeline {
         
          stage('Provision infrastructure') {
 		 steps {            
-                sh 'terraform init -backend=true'
+                sh 'terraform init'
                 sh 'terraform plan'
                 sh 'terraform apply -auto-approve'
                              
