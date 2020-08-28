@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "ishaqgcpproject01-terraform"
+    bucket = "ishaqgcpproject02-terraform"
     prefix      = "backend"
     credentials = "terraform.json"
   }
